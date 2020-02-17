@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>RussoAlessandroP4</title>
+</head>
+
+<body>
+    
+<script>
+   //Here I declare all my variable I intend to use 
+    var number;
+    var base;
+    var array= [];
+    var array2=[];
+    var correctArray=[];
+    var myArray=[];
+    var max=0;
+    var min=10000000000000000;
+   
+//this loop will repeat the function call process until the letter s is enetered at the end  
+    do{
+    var number;
+    var base;
+    var array= [];
+    var array2=[];
+    var correctArray=[];
+    getNumber();
+    getBase();
+    baseConversion(base, number);
+    backwards(array2);
+    alerter(number, base, correctArray);
+    var final= prompt("Enter s to stop");
+    
+    }while((final!="s")&&(final!="S"));
+    
+    //this sends all the users number to the min max functions
+ myMin(myArray);
+ myMax(myArray);
+ 
+ //Final message
+    
+alert("Thank you for using this program. \nThe smallest value is "+min +"\nThe largest value is "+max);
+    
+    
+    
+ //This function uses a do while loop to continuously ask for a number until valid number is given   
+    function getNumber(){
+    
+    do{
+        number = prompt("Enter a unassigned number");
+        myArray.push(number);
+    }while(number<1);
+    
+    return number;
+    
+    }
+    
+    
+ //This function uses a do while loop to continuously ask for a base until valid base is given    
+    function getBase(){
+        
+        
+         do{
+        base = prompt("Enter b for binary, o for octal, h for hexidecimel");
+    }while((base!="b")&&(base!="B")&&(base!="h")&&(base!="H")&&(base!="o")&&(base!="O"));
+    
+    return base;
+        
+     }
+     
+     //This function converts base 10 into binary, octal and hexidecimel
+     
+    function baseConversion(base, number){
+        
+    //in the case of base being b, the do while loop will create an array of all numbers of 'number' divisible by 2
+        if((base=="b")||(base=="B")){
+        array.push(number);
+        do{ number= Math.floor(number/2);
+            array.push(number);
+        }while(number>1);
+        
+    //Using the array given, I create a rew array with all the remainders
+        for (i=0;i<array.length;i++)
+        {
+        array2.push(array[i]%2);
+        }
+        return array2;
+        }
+     //in the case of base being o, the do while loop will create an array of all numbers of 'number' divisible by 8
+       
+        if((base=="o")||(base=="O")){
+        array.push(number);
+        do{ number= Math.floor(number/8);
+            array.push(number);
+        }while(number>0);
+       
+    //Using the array given, I create a rew array with all the remainders
+        for (i=0;i<array.length;i++)
+        {
+        array2.push(array[i]%8);
+        }
+   //removes last term     
+        array2.pop();
+        return array2;
+        }
+    
+    //in the case of base being b, the do while loop will create an array of all numbers of 'number' divisible by 16
+        if((base=="h")||(base=="H")){
+        array.push(number);
+        do{ number= Math.floor(number/16);
+            array.push(number);
+        }while(number>0);
+    
+   //Using the array given, I create a rew array with all the remainders   
+        for (i=0;i<array.length;i++)
+        {
+        array2.push(array[i]%16);
+   
+   //in the special digit case i have a set of if statements that handles it      
+        if(array2[i]==10){
+            array2[i]="A";
+        }
+        else if(array2[i]==11){
+            array2[i]="B";
+        }
+        else if(array2[i]==12){
+            array2[i]="C";
+        }
+        else if(array2[i]==13){
+            array2[i]="D";
+        }
+        else if(array2[i]==14){
+            array2[i]="E";
+        }
+        else if(array2[i]==15){
+            array2[i]="F";
+        }
+        else{array2[i]=array2[i];}
+        }
+ //removes last term       
+        array2.pop();
+        return array2;
+        }
+    
+        }
+        
+    //for loop function and makes array backwards
+        function backwards(array2){
+            
+            for(var i=(array2.length-1); i>=0;i--){
+                
+                correctArray.push(array2[i]);
+            }
+            return correctArray;
+        }
+        //this function creates the second to final alert
+            function alerter(number, base, correctArray){
+                
+                var title="";
+                var string="";
+                
+                if ((base=="b")||(base=="B")){
+                    title="binary";
+                }
+                
+                if ((base=="o")||(base=="O")){
+                    title="octal";
+                }
+                
+                if ((base=="h")||(base=="H")){
+                    title="hexidecimel";
+                }
+ //this loop turns array into a string               
+                for(i=0; i<correctArray.length;i++){
+            
+            string=string+correctArray[i];
+            }
+    
+                
+                
+                alert("Base 10 number "+number+" is "+string+" in "+title);
+            }
+   //for loop detects biggest number         
+        function myMax(myArray){
+            
+           
+            
+            for(var i =0; i<=myArray.length; i++){
+                if(myArray[i]>max){
+                    max=myArray[i];
+                }
+                
+            }
+            return max;
+        }
+        
+      //for loop detects smallest number  
+        function myMin(myArray){
+            
+            for(var i =0; i<=myArray.length; i++){
+                if(myArray[i]<min){
+                    min=myArray[i];
+                }
+                
+            }
+            return min;
+        }
+    
+</script>
+
+
+
+
+
+</body>
+</html>
