@@ -1,0 +1,1 @@
+Simple exercises such as finding the factorial and making asterisk squares. Application via the web.

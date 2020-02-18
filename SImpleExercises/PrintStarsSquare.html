@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Script 2</title>
+</head>
+
+<body>
+<script>
+    
+    //will continue to ask user for number of rows until valid answer is given
+    var rows;
+    do{
+    rows = prompt("Enter number of rows:");
+    }while(rows<=0);
+    //will continue to ask user for number of columns until valid answer is given
+    var col;
+    do{
+    col = prompt("Enter number of colums:");
+    }while(col<=0);
+   
+   //for loop to repeat nested loop, makes the column riteration repeat until rows are complete
+   for(var j=1; j<=rows; j++){
+    
+    //for loop for the columns
+    
+        for(var i=1; i<=col; i++){
+        document.write("*");
+        }
+        //break at the end
+        document.write("<br>");
+   }
+   
+   
+</script>
+
+</body>
+</html>
