@@ -1,0 +1,201 @@
+/*body contains a pink background and here you can see my positioning of the first heading*/
+h1 {
+    background-color: #ffb3ff;
+    font-family: fantasy;
+    border-style: double;
+    text-align: center;
+    margin-left:200px;
+    margin-right:200px;
+    margin-top:80px;
+}
+/*To make my page interesting I added a flower border which goes around the page, attribution (http://wallsdesk.com/rose-91553/)*/
+body{
+    background-image: url(flower.JPG), url(flower.JPG), url(flower.JPG), url(flower.JPG);
+    background-position: top, left, right, bottom;
+    background-size: 80px 60px, 80px 60px, 80px 60px, 80px 60px;
+    background-repeat: repeat-x, repeat-y, repeat-y, repeat-x;
+    background-color: cyan;
+}
+/*controls the styling of my heading and first paragraph box*/
+div{
+    background-color:#ffb3ff;
+    border-style: double;
+    font-family: cursive;
+    text-align: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    
+    
+}
+/*To make use of the space I re-used the image in the HTML document and repeated it*/
+div.image{
+    background-image: url(africanViolet.JPG), url(africanViolet.JPG);
+    background-repeat:no-repeat, no-repeat;
+    background-position: 90% 40%, 50% 40%;
+}
+/*The sale plants heading is presented with a pink border, floated right and enlarged*/
+p.SalePlants{
+    color: red;
+  text-decoration: underline;
+  font-weight: bolder;
+  background-color:#ffb3ff;
+    border-style: double;
+    font-family: cursive;
+    text-align: center;
+    font-size: 150%;
+    margin-left: 70px;
+    margin-right: 200px;
+    float: right;
+}
+/*positioned first paragraph in the middle using margins and made background color cyan*/
+.firstp{
+     background-color: cyan;
+    font-family: fantasy;
+    border-style: double;
+    text-align: center;
+    margin-left:100px;
+    margin-right:100px;
+}
+span{
+    text-decoration: underline;
+    font-weight: 100;
+    color: #ff9900;
+}
+/*Used child selector here to nake the caption differ from the image background*/
+figure>figcaption{
+    background-color: cyan;
+    text-decoration: underline;
+    text-transform: uppercase;
+    float:none;
+    font-size: 17px;
+    
+}
+/*Positioning image*/
+#image{
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 800px;
+}
+/*positioning list*/
+ul.list{
+    background-color:#ffb3ff;
+    border-style: double;
+    display: inline-block;
+    margin-left: 100px;
+}
+li {
+  list-style-type: square;
+  font-size: 130%;
+}
+/*this descendant selector allows the nested bullet points to show as a disc*/
+li li {
+  list-style-type: disc;
+  font-size: 130%;
+}
+/*positioning, color and enlargement of heading*/
+#heading{
+    color: red;
+    text-decoration: underline;
+    font-weight: bolder;
+    background-color:#ffb3ff;
+    border-style: double;
+    font-family: cursive;
+    text-align: center;
+    font-size: 150%;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+
+}
+/*positioning of image aswell as changing width*/
+div.image2{
+    margin: auto;
+    width: 30%;
+    border: 3px solid red;
+    padding: 10px;
+    background-color: #ffb3ff;
+}
+/*table here has grooved borders with a red finish*/
+#table1{
+    border: groove;
+    border-collapse:separate;
+    background-color: #ffb3ff;
+    border:2px solid red;
+    font-family: fantasy;
+    border-style: double;
+    margin:auto;
+    width:40%;
+    text-align: center;
+    margin-top:20px;
+}
+/*Positioning and styling of header 2*/
+#heading2{
+  text-decoration: underline;
+  font-weight: bolder;
+  background-color:#ffb3ff;
+    border-style: double;
+    border-color: red;
+    font-family: cursive;
+    text-align: center;
+    font-size: 150%;
+    clear: right;
+    margin-left:80px;
+    margin-right:80px;
+}
+/*table 2 also grooved*/
+#table2{
+    border: groove;
+    border-collapse:separate;
+    background-color: #ffb3ff;
+    border:2px solid cyan;
+    font-family: fantasy;
+    border-style:groove;
+    margin-left: 120px;
+}
+/*Class selector here used to specify the color of the table headings*/
+.tablehead{
+    background-color:#ff9900;
+}
+[class="blank"]{
+    background-color:#ff6666;
+}
+/*attribute selector used here to specify that all cells with writing in it must be in cursive and centered*/
+[class="notblank"]{
+    font-family: cursive;
+    text-align: center;
+}
+[class="empty"]{
+    background-color:red;
+}
+/*Positioning, color, size and font of the classe heading*/
+p.classes{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: fantasy;
+    font-size: larger;
+    color: #ff6666;
+    text-decoration: underline;
+    font-weight: 200;
+}
+div.details{
+    border: 3px solid red;
+    background-color: #ffb3ff;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+/*Specifies that the address must be cyan*/
+span.address{
+    color: cyan;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+/*Specifies that the number must be red*/
+span.number{
+    color: red;
+    text-decoration: underline;
+}

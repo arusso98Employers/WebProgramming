@@ -1,0 +1,230 @@
+/* In the body I inserted a background image attribution (http://paper4pc.com/flower-pattern.html#) that repeats in the back*/
+body{
+    background-image: url(background1.JPG);
+    background-size: 500px 300px;
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+/*the heading is positioned to the right with a peach background and cyan border*/
+h1 {
+    background-color: #ff8080;
+    font-family: fantasy;
+    border-style: double;
+    text-align: center;
+    margin-left:700px;
+    margin-right:70px;
+    margin-top:80px;
+    border-color: cyan;
+}
+/*the first paragraph contained maryland borders, attribution (maryland terrapins), running down the left and right side*/
+.p1only{
+    background-color:#ff8080;
+    border-style: double;
+    font-family: cursive;
+    text-align: center;
+    margin-left: 400px;
+    margin-right: 70px;
+    margin-bottom: 70px;
+    background-image: url("terp.JPG"), url("terp.JPG") ;
+    background-size: 50px 50px, 50px 50px;
+    background-position: left, right;
+    background-repeat: repeat-y, repeat-y;
+    border-color: cyan;
+/*This span allows the words to show up in a cyan color whilst bolded and underlined*/
+}
+span {
+  color: cyan;
+  text-decoration: underline;
+  font-weight: bolder;
+/*the image is positioned to the left and edited to contain borders and also the maryland logo running down the sides*/
+}
+div.image{
+    margin-left: 30px;
+    margin-right: 200px;
+    width: 30%;
+    border: 3px solid cyan;
+    padding: 10px;
+    background-color: #ff8080;
+    margin-top: 30px;
+    float: left;
+    background-image: url("terp.JPG"), url("terp.JPG") ;
+    background-size: 50px 50px, 50px 50px;
+    background-position: left, right;
+    background-repeat: repeat-y, repeat-y;
+}
+/*the heading is positioned to the left and and made bigger with font size*/
+p.SalePlants{
+    border-color: cyan;
+  text-decoration: underline;
+  font-weight: bolder;
+  background-color:#ff8080;
+    border-style: double;
+    font-family: cursive;
+    text-align: center;
+    font-size: 150%;
+    margin-left: 500px;
+    margin-right: 100px;
+    text-align: center;
+}
+/*the list is displayed in an inline-block and has a peach color background*/
+ul.list{
+    background-color:#ff8080;
+    border-style: double;
+    display: inline-block;
+    margin-left: 100px;
+}
+/*here I use the image ID and position it to the left within its box*/
+#image{
+    height: 300px;
+    margin-left: 30px;
+    margin-right: 800px;
+}
+/*Here I use the child selector to allow only the caption to follow my instructions rather than the caption aswell as the image*/
+figure>figcaption{
+    background-color: cyan;
+    text-decoration: underline;
+    text-transform: uppercase;
+    float:none;
+    font-size: 15px;
+    font-family: fantasy;
+    text-align: center;
+    
+}
+/*This allows the main bullet points to show up as a square*/
+li {
+  list-style-type: square;
+  font-size: 130%;
+}
+/*this descendant selector allows the nested bullet points to show as a disc*/
+
+li li {
+  list-style-type: disc;
+  font-size: 130%;
+}
+/*positioning and styling of the heading box*/
+#heading{
+    text-decoration: underline;
+    font-weight: bolder;
+    background-color:#ff8080;
+    border-style: double;
+    font-family: cursive;
+    text-align: center;
+    font-size: 150%;
+    margin-left: 600px;
+    margin-right: 200px;
+    text-align: center;
+    border: 3px solid cyan;
+}
+/*box containing image is styled, positioned and contains maryland borders running down the side*/
+div.image2{
+    margin-left: 600px;
+    margin-right: 100px;
+    width: 34%;
+    border: 3px solid cyan;
+    padding: 10px;
+    background-color: #ff8080;
+    background-image: url("terp.JPG"), url("terp.JPG") ;
+    background-size: 50px 50px, 50px 50px;
+    background-position: left, right;
+    background-repeat: repeat-y, repeat-y;
+}
+/*Positioning of the second image*/
+#image2{
+    margin-left: 120px;
+    margin-right: 100px;
+}
+/*This table also contains borders running down the side*/
+#table1{
+    border: groove;
+    border-collapse:separate;
+    background-color: #ff8080;
+    border:2px solid cyan;
+    font-family: fantasy;
+    border-style: double;
+    margin-left: 600px;
+    margin-right: 70px;
+    width:36%;
+    text-align: center;
+    margin-top:20px;
+    background-image: url("terp.JPG"), url("terp.JPG") ;
+    background-size: 50px 50px, 50px 50px;
+    background-position: left, right;
+    background-repeat: repeat-y, repeat-y;
+}
+/*Positioning, color and styling of the second table*/
+
+#table2{
+    border: groove;
+    border-collapse:separate;
+    background-color: #ff8080;
+    border:2px solid cyan;
+    font-family: fantasy;
+    border-style:groove;
+    margin-left: 120px;
+}
+.tablehead{
+    background-color:cyan;
+}
+/*Specifies that every blank cell contains a closed image, attribution (bridgewaterpress.co.uk)*/
+[class="blank"]{
+     background-image: url("closed.JPG");
+     background-size: 50px 50px;
+     background-repeat: no-repeat;
+     background-position: 50% 50%;
+     background-color: white; 
+}
+[class="notblank"]{
+    font-family: cursive;
+    text-align: center;
+}
+[class="empty"]{
+    background-color:#ff8080;
+}
+/*positioning, and styling of text within the details box*/
+p.classes{
+    text-align: center;
+    background-color: #ff8080;
+    text-transform: uppercase;
+    font-family: fantasy;
+    font-size: larger;
+    text-decoration: underline;
+    font-weight: 200;
+    margin-left:300px;
+    margin-right:300px;
+    border: 3px solid cyan;
+}
+/*detail box also contains maryland borders*/
+div.details{
+    border: 3px solid cyan;
+    background-color: #ff8080;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-right: 300px;
+    margin-left: 300px;
+    background-image: url("terp.JPG"), url("terp.JPG") ;
+    background-size: 50px 50px, 50px 50px;
+    background-position: left, right;
+    background-repeat: repeat-y, repeat-y;
+}
+span.address{
+    color: cyan;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+span.number{
+    color: red;
+    text-decoration: underline;
+}
+#heading2{
+  text-decoration: underline;
+  font-weight: bolder;
+  background-color:#ff8080;
+    border-style: double;
+    border-color: cyan;
+    font-family: cursive;
+    text-align: center;
+    font-size: 150%;
+    margin-left:100px;
+    margin-right:800px;
+}

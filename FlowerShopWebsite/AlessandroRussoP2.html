@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--This tag specifies that the language is in english-->
+<html lang="en">
+<head>
+    <title>Terrapin Plant Shop</title>
+    <!--<link rel="stylesheet" href="RussoAlessandroCSS1.css">-->
+    <link rel="stylesheet" href="RussoAlessandroCSS2.css">
+    <!--<link rel="stylesheet" href="RussoAlessandroCSS3.css"-->
+</head>
+
+<body>
+    <!--By placing a div here I am able to group the heading and the first paragrpah-->
+    <div>
+        <div class="firstp">
+        <h1>The Terrapin Plant Shop</h1>
+        <!--The div here only reflect the paragraph-->
+        <div class="p1only">
+            <!--here I used span to highlight the words that I believe need emphasis-->
+         <p>Are you a <span>bored</span> college student with a lot of time on your hand? <br> Classes <span>too easy</span> and not enough homework? <br> Do you wish you had just one other <span>responsibilty?</span> 
+        <br> Need a <span>hobby?</span><br> Collecting and taking care of houseplants is the <span>answer.</span><br> Stop by the <span>Terrapin plant shop</span> and take home a houseplant today. <br> The Terrapin Plant Shop
+        is the <span>premiere destination</span> for all your houseplant needs.</p>
+         </div>
+        </div> 
+    </div>
+    <!--here I used div class image to group both the picture and the captions-->
+    <div class="image">
+        <figure>
+    <!--here I used an ID so I can play around with the image separate to the caption-->
+            <img id="image" src="africanViolet.JPG" alt="African Violet">
+            <figcaption>African violets are easy to care for and they bloom often.</figcaption>
+        </figure>
+    </div>
+    <!--here I used div class saleplants to select the plants for sale heading, allowing me to edit it-->
+<p class="SalePlants">Plants for sale at the Terrapin Plant Shop</p>
+    <!--here I used class list to select the list and add css-->
+<ul class="list">
+    <li> Orchids
+        <ul>
+            <li>Phalaenopsis</li>
+            <li>Dendrobium</li>
+            <li>Many other types</li>
+        </ul>
+    </li>
+    <li>Cacti and Succulents</li>
+    <li>Ferns</li>
+    <li>Tropical Houseplants</li>
+    <li><span>You name it. We got it.</span></li>
+</ul>
+<!--here I used an ID so I can play around with the heading-->
+<p id="heading">This week only, buy one Draecana plant and get another for absolutely free!</p>
+<!--here I used div class image2 so I can edit the image-->
+<div class="image2">
+<img id="image2" src="plant2.JPG" alt="plant2">
+</div>
+<!--here I used an ID so I can edit the first table-->
+<table id="table1">
+  <tr>
+    <th colspan=2>Our Hours:</th>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>8 to 5</td>
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td>8 to 8</td>
+  </tr>
+  <tr>
+    <td>Wednesday</td>
+    <td>Closed</td>
+  </tr>
+  <tr>
+    <td>Thursday</td>
+    <td>8 to 7</td>
+  </tr>
+  <tr>
+    <td>Friday</td>
+    <td>8 to 5</td>
+  </tr>
+  <tr>
+    <td>Saturday</td>
+    <td>9 to 8</td>
+  </tr>
+  <tr>
+    <td>Sunday</td>
+    <td>12 to 6</td>
+  </tr>
+</table>
+<!--here I used the ID heading2 to select the heading and edit it in css-->
+<p id="heading2">Show us your UMD ID and get 10% off your purchase!</p>
+<!--here I used a class to select this certain paragraph and edit it in css-->
+<p class="classes">We also offer classes</p>
+<!--here I used the ID table2 to select the second table and edit it in css-->
+<table id="table2">
+    <!--Since the tr class is set, all these headings are grouped and are available to be edited-->
+    <tr class="tablehead">
+        <!--used a class here to specify this is an empty cell-->
+        <th class="empty"></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+    </tr>
+    <tr>
+        <!--Here I am specifying which cells are empty and which ones are not by using the classes "blank" and "notblank"-->
+        <th class="tablehead">10 to 11</th>
+        <td class="notblank">Orchid Care</td>
+        <th class="blank"></th>
+        <th class="blank"></th>
+        <td class="notblank">Do I really need to water that cactus?</td>
+        <td class="notblank">Bonsai trees for beginners</td>
+    </tr>
+    <tr>
+        <th class="tablehead">11 to 12</th>
+        <td class="blank" ></td>
+        <td class="notblank">Bonsai trees or beginners</td>
+        <th class="blank"></th>
+        <td class="blank"></td>
+        <td class="notblank">Orchid care 101</td>
+    </tr>
+    <tr>
+        <th class="tablehead">2 to 3</th>
+        <td class="blank"></td>
+        <td class="blank"></td>
+        <th class="blank"></th>
+        <td class="notblank">Orchid care 101</td>
+        <td class="blank"></td>
+    </tr>
+    <tr>
+        <th class="tablehead">3 to 4</th>
+        <td class="blank"></td>
+        <td class="blank"></td>
+        <td class="notblank">The fascinating world of ferns</td>
+        <td class="blank"></td>
+        <td class="blank"></td>
+    </tr>
+</table>
+<!--here I used div class deatils to group the address and telephone number for better display-->
+<div class="details">
+<p>We are conveniently located next to campus at:</p>
+<!--here I used the span class address to highlight the address only so I can edit it in css-->
+<address><span class="address">123 Orchid Lane, College Park, MD 20742</span></address>
+<!--here I used the span class number to highlight the telephone number only so I can edit it in css-->
+<p>Give us a call at <span class="number">555-0123</span></p>
+</div>
+</body>
+</html>
