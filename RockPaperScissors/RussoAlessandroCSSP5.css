@@ -1,0 +1,17 @@
+[class="table"]{
+     border: groove;
+    border-collapse:separate;
+    background-color: #006400;
+    border:2px solid gold;
+    font-family: fantasy;
+    border-style: double;
+    margin-left:  250px;
+     margin-right:  300px;
+}
+body{
+    background-color: #8B008B;
+     background-image: url("terp.JPG"), url("terp.JPG") ;
+    background-size: 50px 50px, 50px 50px;
+    background-position: left, right;
+    background-repeat: repeat-y, repeat-y;
+}

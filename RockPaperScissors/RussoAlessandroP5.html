@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Alex Russo Project 5</title>
+    <link rel="stylesheet" href="RussoAlessandroCSSP5.css">
+</head>
+
+<body>
+<!----use the div tag to highlight the table for editing-->
+<div class="table">
+<table border="1">
+    <tr>
+        
+<!---colspan of 3 so the title is displayed throughout the width of the table--->
+        <th colspan=3 width="310">Rock Paper Scissors</th>
+    </tr>
+    <tr>
+<!---the image is a clickable rock--->
+        <th ><img src="rock.jpg" id="pic1"  onclick= "hit(1);" /></th>
+        
+<!---this is where theusers choice will be displayed---->
+        <th rowspan=2 > <span id="userChoice"><img id="pic4"/></span></th>
+        
+<!---Computers choice is displayed here-->
+        <th rowspan=2 ><img id="pic5"/></th>
+    </tr>
+    <tr>
+<!---The image is a clickable paper--->
+        <th><img src="paper.jpg" id="pic2" onclick="hit(2);" /></th>
+    </tr>
+    <tr>
+<!---The image is a clickable scissors-->
+        <th><img src="scissors.jpg"  onclick="hit(3);" /></th>
+    </tr>
+    <tr>
+<!---Used span here the the statistics can increase--->
+        <th colspan=3>Wins: <span id="wins">0</span> Losses: <span id="loss">0</span> Ties: <span id="ties">0</span> Rounds: <span id="roundCounter">0</span></th>
+    </tr>
+    
+</table>
+</div>
+<script>
+ //starting pictures   
+    pic4.src="leftPaperHand.jpg";
+    pic5.src="rightRockHand.jpg";
+    
+//statistics counters all start at 0
+    var hitCount = 0;
+    var tieCount = 0;
+    var winCount = 0;
+    var loseCount = 0;
+    
+ //this function creates the random computer number which in turn corresponds to a rock or paper or scissors   
+    function computer(number) {
+        var compChoice = Math.random();
+       
+        pic5.src = "rightRockHand.jpg";
+        if (compChoice < 0.3333) {
+            pic5.src = "rightRockHand.jpg";
+        } else if (compChoice > 0.3333 && compChoice<0.6666) {
+            pic5.src = "rightPaperHand.jpg";
+        } else if (compChoice > 0.6666) {
+            pic5.src = "rightScissorHand.jpg";
+        }
+//the computers choice and the users choice are sent to a separate function
+        stats(compChoice,number);
+    }
+ 
+ //this is the first function called and is triggered whenever the user clicks on it. the usrs choice corresponds to a hand gesture   
+   function hit(number){
+    
+//whenever an option is picked the round counter increases
+  
+  if(number===1){
+   pic4.src = "leftRockHand.jpg";
+   hitCount = hitCount + 1;
+    roundCounter.innerHTML = hitCount;}
+  else if(number===2){
+   pic4.src = "leftPaperHand.jpg";
+   hitCount = hitCount + 1;
+    roundCounter.innerHTML = hitCount;
+   }
+   else if(number===3){
+   pic4.src = "leftScissorHand.jpg";
+   hitCount = hitCount + 1;
+    roundCounter.innerHTML = hitCount;
+   }
+//sends the users choice to a separate function so it can rendevouz with the computers choice  
+   computer(number);
+   
+   }
+ 
+ //this function calculate if the round was a win loss or tie
+function stats(compChoice, number){
+ 
+ //whenever theres a tie, tie counter increases   
+    if((compChoice<0.3333 && number==1)||(compChoice>0.6666 && number==3)||(compChoice>0.3333 &&compChoice<0.6666 && number==2)){
+         tieCount = tieCount + 1;
+    ties.innerHTML = tieCount;
+    }
+    
+ //whenever theres a win, win counter increases 
+    else if((number==1 && compChoice>0.6666)||(number==2 && compChoice<0.3333)||(number==3 && compChoice>0.3333 && compChoice <0.6666)){
+        winCount = winCount + 1;
+    wins.innerHTML = winCount;
+    }
+    
+// //whenever theres a loss, loss counter increases 
+    else if((number==1 && compChoice>0.3333 && compChoice <0.6666)||(number==2 && compChoice>0.6666)||(number==3 && compChoice<0.3333)){
+        loseCount = loseCount + 1;
+    loss.innerHTML = loseCount;
+    }
+    
+}
+    
+
+</script>
+</body>
+</html>
